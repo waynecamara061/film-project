@@ -1,0 +1,59 @@
+.filme-list-content {
+  max-width: 800px;
+  margin: 14px auto;
+}
+
+.loading-container {
+  width: 100%;
+  height: 860px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.filme-list-content article {
+  max-width: 100%;
+  background-color: transparent;
+  padding: 15px;
+  border-radius: 4px;
+
+  font-family: "Outfit";
+}
+
+.filme-list-content h1 {
+  margin-bottom: 14px;
+  font-size: 22px;
+
+  font-family: "Outfit";
+  text-align: center;
+  display: block;
+}
+
+.filme-list-content img {
+  width: 900px;
+  max-width: 100%;
+  max-height: 340px;
+
+  object-fit: cover;
+
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.filme-list-content a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Outfit";
+  font-weight: 500;
+  padding: 10px 0;
+  font-size: 24px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.74);
+
+  background-color: #404142b4;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
