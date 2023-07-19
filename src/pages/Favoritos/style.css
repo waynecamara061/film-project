@@ -1,0 +1,38 @@
+.favoritos-container{
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favoritos-container h1 {
+  font-size: 14px;
+}
+
+.favoritos-container span {
+  font-size: 18px;
+}
+
+.favoritos-container ul {
+  width: 720px;
+}
+
+.favoritos-container ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.more-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more-info a {
+  text-decoration: none;
+  color: #116feb;
+  margin-right: 14px;
+}

@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Navigate, json, useNavigate, useParams } from 'react-router-dom';
 import ReactLoading from 'react-loading';
 import api from '../../services/api';
 import './style.css';
+import { toast } from 'react-toastify';
 
 function Filme() {
     const { id } = useParams();
@@ -37,6 +38,23 @@ function Filme() {
         loadingFilme()
     }, [navigate, id])
 
+
+    function salvarFilme() {
+        const handleToken = localStorage.getItem("@primeflix");
+        const saveFilme = JSON.parse(handleToken) || [];
+        const hasFilme = saveFilme.some((saveFilme) => saveFilme.id == filme.id)
+
+        if (hasFilme) {
+            toast.warn("Esse filme já está na lista")
+            return;
+        }
+
+        saveFilme.push(filme);
+        localStorage.setItem("@primeflix", JSON.stringify(saveFilme))
+        toast.success("Filme salvo com sucesso")
+
+    }
+
     return (
         <>
             {loading
@@ -60,11 +78,11 @@ function Filme() {
                     </strong>
 
                     <div className="btn-container">
-                        <button>
+                        <button onClick={() => salvarFilme()}>
                             salvar
                         </button>
                         <button>
-                            <a href="#">
+                            <a target='_blank' rel='external' href={`https://www.youtube.com/results?search_query=${filme.title} Trailer`}>
                                 trailer
                             </a>
                         </button>

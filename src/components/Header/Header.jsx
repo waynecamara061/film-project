@@ -8,7 +8,7 @@ function Header() {
         <>
             <div className='container-header'>
                 <a href="/home">Prime flix</a>
-                <a href="/">Meus filmes</a>
+                <a href="/favoritos">Meus filmes</a>
             </div>
         </>
     )
